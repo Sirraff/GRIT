@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "770749722847",
+    "project_id": "grit-95d56",
+    "storage_bucket": "grit-95d56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770749722847:android:5c67872515fb7c9685b96a",
+        "android_client_info": {
+          "package_name": "com.rlsreis.grit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1IVNJbrjXUnwVYq-L56J0ownSDyXNz6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
