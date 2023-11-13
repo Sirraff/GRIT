@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
@@ -10,60 +11,143 @@
     android:padding="15sp"
     tools:context=".LoginActivity">
 
+    <Button
+        android:id="@+id/git_link"
+        android:layout_width="203dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/pixel"
+        android:text="Click here to collaborate or learn more about the project"
+        android:textStyle="bold"
+        android:gravity="clip_horizontal"
+        app:iconPadding="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
-        android:layout_width="304dp"
+        android:id="@+id/textView4"
+        android:layout_width="189dp"
+        android:layout_height="69dp"
+        android:background="#80DBB0"
+        android:backgroundTint="#80DBB0"
+        android:fontFamily="@font/pixel"
+        android:text="G.R.I.T"
+        android:textColor="#F9FED8"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.903" />
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:background="@color/teal_200"
+        android:backgroundTint="#03D8C3"
+        android:text="@string/sign_up"
+        android:textColor="#FCFED6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10sp"
+        android:layout_marginTop="124dp"
+        android:backgroundTint="#A3A083"
+        android:fontFamily="@font/pixel"
+        android:text="@string/grass_roots_info_taker"
+        android:textColor="#F9FED8"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="248dp"
+        android:fontFamily="@font/pixel"
         android:gravity="center"
         android:text="@string/login"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="257dp"
-        android:layout_height="wrap_content"
-        app:boxBackgroundColor="@android:color/transparent"
-        app:boxStrokeColor="@android:color/transparent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
-            android:layout_width="262dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/white_bg"
-            android:hint="@string/email"
-            android:padding="10dp"
-            android:selectAllOnFocus="false"
-            android:singleLine="false"
-            android:textSize="25sp"
-            tools:visibility="visible" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="249dp"
-        android:layout_height="wrap_content"
-        android:textSize="30sp">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
-            android:layout_width="262dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/white_bg"
-            android:hint="@string/password"
-            android:padding="10dp"
-            android:textSize="25sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/login_button"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="100dp"
+        android:layout_width="138dp"
         android:layout_height="50dp"
-        android:layout_marginTop = "10dp"
-        android:text="@string/login" />
+        android:background="@color/teal_200"
+        android:backgroundTint="#03D7C2"
+        android:text="@string/LoginMain"
+        android:textColor="#FCFED6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.151" />
 
-</LinearLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password"
+        android:layout_width="257dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/white_bg"
+        android:hint="@string/password"
+        android:padding="10dp"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email"
+        android:layout_width="257dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/white_bg"
+        android:hint="@string/email"
+        android:padding="10dp"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="126dp"
+        android:layout_height="29dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
