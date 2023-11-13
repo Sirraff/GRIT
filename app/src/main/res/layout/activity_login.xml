@@ -13,16 +13,19 @@
 
     <Button
         android:id="@+id/git_link"
-        android:layout_width="203dp"
-        android:layout_height="53dp"
+        android:layout_width="298dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
         android:fontFamily="@font/pixel"
-        android:text="Click here to collaborate or learn more about the project"
-        android:textStyle="bold"
         android:gravity="clip_horizontal"
+        android:text="Click here to collaborate or learn more"
+        android:textSize="10dp"
+        android:textStyle="bold"
         app:iconPadding="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.681"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -48,7 +51,7 @@
         android:id="@+id/signup_button"
         android:layout_width="165dp"
         android:layout_height="50dp"
-        android:background="@color/teal_200"
+
         android:backgroundTint="#03D8C3"
         android:text="@string/sign_up"
         android:textColor="#FCFED6"
@@ -97,7 +100,7 @@
         android:id="@+id/login_button"
         android:layout_width="138dp"
         android:layout_height="50dp"
-        android:background="@color/teal_200"
+
         android:backgroundTint="#03D7C2"
         android:text="@string/LoginMain"
         android:textColor="#FCFED6"

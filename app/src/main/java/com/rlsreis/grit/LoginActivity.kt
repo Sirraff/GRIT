@@ -8,7 +8,6 @@ import android.net.Uri
 import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
-import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
@@ -20,7 +19,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var editTextEmail: TextInputEditText
     private lateinit var editTextPassword: TextInputEditText
     private lateinit var progressBar: ProgressBar
-    private lateinit var textView: TextView
     private lateinit var gitLinkButton: Button
     private lateinit var signupButton: Button
 
@@ -67,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         Log.d(TAG, "signInWithEmail:success")
-                        val user = auth.currentUser
+                        // val user = auth.currentUser
                         // updateUI(user)
                         reload()
                     } else {

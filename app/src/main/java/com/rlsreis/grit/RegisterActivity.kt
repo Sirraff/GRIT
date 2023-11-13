@@ -35,7 +35,6 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         buttonReg.setOnClickListener {
-            progressBar.visibility = View.GONE
             val email = editTextEmail.text.toString()
             val password = editTextPassword.text.toString()
 
@@ -48,37 +47,35 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            progressBar.visibility = View.VISIBLE
+
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
-                    progressBar.visibility = View.GONE
                     if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
-                        Log.d(TAG, "createUserWithEmail:success")
                         val user = auth.currentUser
-                        Toast.makeText(
-                            baseContext,
-                            "Account created!",
-                            Toast.LENGTH_SHORT,
-                        ).show()
-                        //TODO
-                       // updateUI(user)
+                        user?.sendEmailVerification()
+                            ?.addOnCompleteListener { emailVerificationTask ->
+                                progressBar.visibility = View.GONE
+                                if (emailVerificationTask.isSuccessful) {
+                                    Toast.makeText(baseContext, "Verification email sent to $email.", Toast.LENGTH_SHORT).show()
+                                    // TODO redirect the user to a login page or a page that instructs them to verify their email
+                                } else {
+                                    Toast.makeText(baseContext, "Failed to send verification email.", Toast.LENGTH_SHORT).show()
+                                }
+                            }
                     } else {
-                        // If sign in fails, display a message to the user.
+                        progressBar.visibility = View.GONE
                         Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                        Toast.makeText(
-                            baseContext,
-                            "Authentication failed.",
-                            Toast.LENGTH_SHORT,
-                        ).show()
-                        //TODO
-                        //updateUI(null)
+                        Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
                     }
                 }
         }
-
-
-    }
+        }
     companion object {
         private const val TAG = "RegisterActivity"
     }
-}
+
+    }
+
+
+
