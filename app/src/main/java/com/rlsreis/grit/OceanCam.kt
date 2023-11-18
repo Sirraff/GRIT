@@ -1,5 +1,6 @@
 package com.rlsreis.grit
 import analyzers.OceanAnalyzer
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -13,9 +14,12 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 
 class OceanCam : AppCompatActivity() {
+    private lateinit var backTextView: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ocean_cam)
+
+        backTextView = findViewById(R.id.exitButton)
 
         val previewView = findViewById<PreviewView>(R.id.previewView)
 
@@ -49,8 +53,9 @@ class OceanCam : AppCompatActivity() {
 
         }, ContextCompat.getMainExecutor(this))
 
-        val exitButton = findViewById<Button>(R.id.exitButton)
-        exitButton.setOnClickListener {
+        backTextView.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
             finish()
         }
     }
