@@ -16,4 +16,5 @@
     <string name="plankton_analyzer">Plankton Analyzer</string>
     <string name="decibel_reader">Decibel Reader</string>
     <string name="back_to_main">back</string>
+    <string name="tools">Tools</string>
 </resources>

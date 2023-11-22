@@ -41,11 +41,11 @@
         app:layout_constraintVertical_bias="0.004" />
 
     <Button
-        android:id="@+id/ocean_button"
+        android:id="@+id/tools_button"
         android:layout_width="174dp"
         android:layout_height="84dp"
         android:backgroundTint="#80DBB0"
-        android:text="@string/plankton_analyzer"
+        android:text="@string/tools"
         app:iconTint="#80DBB0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +58,7 @@
         android:id="@+id/button2"
         android:layout_width="144dp"
         android:layout_height="75dp"
+        android:layout_marginBottom="228dp"
         android:backgroundTint="#80DBB0"
         android:text="@string/database"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -8,19 +8,15 @@ import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     private lateinit var logoutButton: Button
-    private lateinit var oceanButton: Button
+    private lateinit var toolsButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        toolsButton = findViewById(R.id.tools_button)
         logoutButton = findViewById(R.id.logout_button)
-        oceanButton = findViewById(R.id.ocean_button)
 
-        oceanButton.setOnClickListener {
-            val intent = Intent(this, OceanCam::class.java)
-            startActivity(intent)
-            finish()
-        }
+
         logoutButton.setOnClickListener {
             // Log out the user
             FirebaseAuth.getInstance().signOut()
@@ -30,5 +26,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()  // Ensure this activity is closed so the user can't navigate back to it
         }
+
+        toolsButton.setOnClickListener {
+            val intent = Intent(this, ToolsActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+
     }
 }
