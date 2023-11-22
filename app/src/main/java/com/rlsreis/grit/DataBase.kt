@@ -10,6 +10,12 @@ import com.rlsreis.grit.data_models.EnvironmentalData
 import java.text.SimpleDateFormat
 import java.util.Locale
 
+// TODO
+// create view with search and create
+// search add existing fields
+// create add fields
+// if creator, permission to edit???
+// make sure firestore/firebase works, also see pricing :/
 class DataBase : AppCompatActivity() {
 
     private lateinit var backButton: Button
