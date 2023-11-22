@@ -54,7 +54,7 @@ class OceanCam : AppCompatActivity() {
         }, ContextCompat.getMainExecutor(this))
 
         backTextView.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ToolsActivity::class.java)
             startActivity(intent)
             finish()
         }
