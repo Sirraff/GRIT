@@ -7,14 +7,16 @@ import android.widget.Button
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var logoutButton: Button
+    private lateinit var logoutButton: Button // only get initialized on call(hence late init)
     private lateinit var toolsButton: Button
+    private lateinit var dbButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         toolsButton = findViewById(R.id.tools_button)
         logoutButton = findViewById(R.id.logout_button)
+        dbButton = findViewById(R.id.db_button)
 
 
         logoutButton.setOnClickListener {
@@ -29,6 +31,12 @@ class MainActivity : AppCompatActivity() {
 
         toolsButton.setOnClickListener {
             val intent = Intent(this, ToolsActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        dbButton.setOnClickListener {
+            val intent = Intent(this, DataBase::class.java)
             startActivity(intent)
             finish()
         }
