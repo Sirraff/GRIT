@@ -6,8 +6,15 @@ This repository contains the source code for an Environmental Data Management ap
 ## Features
 - User authentication and management.
 - Data entry for different environmental categories.
+- Optimized user generated data by subqueuering geotags and dates, enabling historical mapping of data points
+- Phytoplankton concentration
+- Decibel Reading
+
+## Future Features
 - Real-time data visualization with integrated mapping.
-- Admin panel for user and data management.
+- More Tools
+- Increase user data tag creation scope
+- Integrated website
 
 ## Installation
 To set up this project locally, follow these steps:
