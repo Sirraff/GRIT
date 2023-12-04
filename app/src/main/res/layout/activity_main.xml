@@ -12,6 +12,19 @@
     tools:context=".MainActivity">
 
 
+    <Button
+        android:id="@+id/db_button4"
+        android:layout_width="144dp"
+        android:layout_height="75dp"
+        android:backgroundTint="#80DBB0"
+        android:text="Search Data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/db_button"
+        app:layout_constraintVertical_bias="0.181" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -60,7 +73,7 @@
         android:layout_height="75dp"
         android:layout_marginBottom="228dp"
         android:backgroundTint="#80DBB0"
-        android:text="@string/database"
+        android:text="@string/add_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

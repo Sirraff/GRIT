@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         dbButton.setOnClickListener {
-            val intent = Intent(this, DataBase::class.java)
+            val intent = Intent(this, CreateDataBase::class.java)
             startActivity(intent)
             finish()
         }

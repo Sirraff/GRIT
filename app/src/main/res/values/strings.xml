@@ -12,9 +12,10 @@
     <string name="LoginMain">Login</string>
     <string name="logout">Logout</string>
     <string name="exit">Exit</string>
-    <string name="database">DataBase</string>
     <string name="plankton_analyzer">Plankton Analyzer</string>
     <string name="decibel_reader">Decibel Reader</string>
     <string name="back_to_main">back</string>
     <string name="tools">Tools</string>
+    <string name="submit">Submit</string>
+    <string name="add_info">Add Info</string>
 </resources>
